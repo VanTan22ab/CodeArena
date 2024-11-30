@@ -6,13 +6,13 @@ import Content from './component/center/content/Content';
 
 function App() {
   return (
-    <>
+    <div className='container'>
       <Navbar />
       <div className='content-center'>
       <Slidebar />
       <Content />
       </div>
-    </>
+    </div>
   );
 }
 

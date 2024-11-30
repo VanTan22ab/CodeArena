@@ -1,6 +1,97 @@
 .main-content{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 20px;
     width: 100%;
     font-family: sans-serif;
     font-size: medium;
     margin-top: 10px;
+}
+.left-content{
+    margin: 50px 30px 0 30px;
+    & p{
+        font-size: 25px;
+        color: rgb(85, 81, 81);
+    }
+    & h4{
+        font-size: 30px;
+        color: #ED5867;
+    }
+    & h1{
+        font-size: 65px;
+        padding: 0;
+        margin-right: 30px;
+    }
+    & .btn-open{
+        background-color: transparent;
+        border: 2px solid #ED5867;
+        color: #ED5867;
+        font-weight: bold;
+        font-size: 20px;
+        height: 60px;
+        border-radius: 10px;
+        margin-top: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        & svg{
+            margin: 0 5px 0 10px;
+        }
+        &:hover{
+            background-color: #ED5867;
+            color: black;
+        }
+    }
+}
+.fb-rating{
+    font-weight: bolder;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 65px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    & p{
+        margin: 3px 0 0 3px;
+        padding: 0;
+    }
+    margin-right: 10%;
+    & h1{
+        font-size: 10px;
+        font-weight: lighter;
+        grid-row: 3;
+        width: 65px;
+        margin: 2px 0 0 3px;
+    }
+}
+.ca-rating, .gg-rating{
+    @extend .fb-rating;
+    & .logoImg{
+        height: 40px;
+    }
+}
+
+.rating-content{
+    display: flex;
+}
+
+@keyframes textAnimation {
+    0%{
+      stroke-dashoffset: 100;
+    }
+    100%{
+      stroke-dashoffset: 0;
+      stroke-width: 2;
+    }
+}
+
+.right-content{
+    padding: 5% 20% 0 20%;
+    & svg path {
+        stroke: #ED5867;
+        stroke-width: 10;
+        stroke-dasharray: 50;
+        stroke-dashoffset: 50;
+        animation: textAnimation 3s ease-out infinite;
+    }
 }
