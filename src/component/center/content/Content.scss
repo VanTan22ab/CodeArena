@@ -6,26 +6,30 @@
     font-family: sans-serif;
     font-size: medium;
     margin-top: 10px;
+    background-color: black;
 }
 .left-content{
-    margin: 50px 30px 0 30px;
+    margin: 10px 30px 0 30px;
     & p{
-        font-size: 25px;
-        color: rgb(85, 81, 81);
+        font-weight: 800;
+        width: 90%;
+        font-size: 17px;
+        color: rgb(179, 179, 179);
     }
     & h4{
-        font-size: 30px;
-        color: #ED5867;
+        font-size: 35px;
+        color: #CDF567;
     }
     & h1{
+        color: white;
         font-size: 65px;
         padding: 0;
         margin-right: 30px;
     }
     & .btn-open{
         background-color: transparent;
-        border: 2px solid #ED5867;
-        color: #ED5867;
+        border: 2px solid #CDF567;
+        color: #CDF567;
         font-weight: bold;
         font-size: 20px;
         height: 60px;
@@ -37,7 +41,7 @@
             margin: 0 5px 0 10px;
         }
         &:hover{
-            background-color: #ED5867;
+            background-color: #CDF567;
             color: black;
         }
     }
@@ -47,15 +51,16 @@
     font-size: 20px;
     display: grid;
     grid-template-columns: 50% 50%;
-    width: 65px;
+    width: 70px;
     box-sizing: border-box;
     align-items: center;
     justify-content: center;
     & p{
+        color: rgb(240, 225, 225);
         margin: 3px 0 0 3px;
         padding: 0;
     }
-    margin-right: 10%;
+    margin-right: 15%;
     & h1{
         font-size: 10px;
         font-weight: lighter;
@@ -73,25 +78,39 @@
 
 .rating-content{
     display: flex;
-}
-
-@keyframes textAnimation {
-    0%{
-      stroke-dashoffset: 100;
-    }
-    100%{
-      stroke-dashoffset: 0;
-      stroke-width: 2;
-    }
+    justify-content: left;
+    align-items: center;
+    margin: 30px 0 30px 0
 }
 
 .right-content{
-    padding: 5% 20% 0 20%;
+    margin: 5px 20% 0 20%;
+    position: relative;
     & svg path {
-        stroke: #ED5867;
-        stroke-width: 10;
+        stroke: #CDF567;
+        stroke-width: 20;
         stroke-dasharray: 50;
         stroke-dashoffset: 50;
-        animation: textAnimation 3s ease-out infinite;
+        animation: textAnimation2 5s ease-out infinite;
+    }
+}
+@keyframes textAnimation2{
+    0%{
+        stroke-dashoffset: 95;
+    }
+    20%{
+        stroke-dashoffset: 90;
+    }
+    40%{
+        stroke-dashoffset: 80;
+    }
+    80%{
+        stroke-dashoffset: 70;
+    }
+    90%{
+        stroke-dashoffset: 60;
+    }
+    100%{
+        stroke-dashoffset: 50;
     }
 }
